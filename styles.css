@@ -1,0 +1,170 @@
+:root {
+  --bg: #f0fdfa;
+  --card: #ffffff;
+  --text: #134e4a;
+  --primary: #0f766e;
+  --muted: #64748b;
+  --line: #d1fae5;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+header p {
+  margin: 0.25rem 0 0;
+  opacity: 0.9;
+}
+
+.layout {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.top-gap {
+  margin-top: 0.8rem;
+}
+
+input,
+button {
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #94a3b8;
+}
+
+button {
+  padding: 0.6rem 0.9rem;
+  border: none;
+  background: var(--primary);
+  color: white;
+}
+
+.secondary {
+  background: #334155;
+}
+
+.list {
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0.6rem 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.meal-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.meal-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.day {
+  font-weight: 600;
+}
+
+.small {
+  background: var(--danger);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.status {
+  margin: 0.8rem 0 0;
+  font-weight: 600;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
