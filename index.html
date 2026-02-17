@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Helper Planner</title>
+  </head>
+  <body>
+    <header>
+      <h1>Helper Planner</h1>
+      <p>Shared tasks, meals, and shopping for you and your helper.</p>
+    </header>
+
+    <main class="layout">
+      <section class="card" id="setup-card">
+        <h2>Account & Household</h2>
+        <p class="muted" id="mode-badge"></p>
+
+        <form id="auth-form" class="stack">
+          <input id="email" type="email" placeholder="Email" />
+          <input id="password" type="password" placeholder="Password" />
+          <div class="row wrap">
+            <button type="button" id="signup-btn">Sign up</button>
+            <button type="button" id="login-btn">Log in</button>
+            <button type="button" id="logout-btn" class="secondary">Log out</button>
+          </div>
+        </form>
+
+        <form id="household-form" class="stack top-gap">
+          <input id="household-id" placeholder="Household ID (e.g. home-123)" required />
+          <button type="submit">Connect Household</button>
+        </form>
+
+        <p id="status" class="status">Waiting for setup…</p>
+      </section>
+
+      <section class="grid" id="planner" aria-live="polite">
+        <section class="card">
+          <h2>Task Checklist</h2>
+          <form id="task-form" class="row">
+            <input id="task-input" placeholder="Add a task" required />
+            <button type="submit">Add</button>
+          </form>
+          <ul id="task-list" class="list"></ul>
+        </section>
+
+        <section class="card">
+          <h2>Weekly Meal Plan</h2>
+          <div id="meal-list" class="meal-list"></div>
+        </section>
+
+        <section class="card">
+          <h2>Grocery / Things to Buy</h2>
+          <form id="grocery-form" class="row">
+            <input id="grocery-input" placeholder="Add item" required />
+            <button type="submit">Add</button>
+          </form>
+          <ul id="grocery-list" class="list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
