@@ -1,0 +1,52 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #14213d;
+  --accent: #ff7a18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #d6e6ff, var(--bg));
+}
+
+.card {
+  width: min(92vw, 560px);
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 20px 50px rgba(20, 33, 61, 0.15);
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+#message {
+  min-height: 1.5rem;
+  font-weight: 600;
+}
